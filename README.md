@@ -8,5 +8,5 @@ Make sure that file `ShortenedUrl.db` has the same path as in `appsettings.json`
 Use lightweight databse and make sure that short link will be redirectiong to correct url. Make code easy to understand, clean and testable.
 
 ## Future ideas
-Work on UI/UX side, make it more user appealing. Use external provider for logging ie. Microsoft Azure AppInsight.
+Work on UI/UX side, make it more user appealing. Use external provider for logging ie. Microsoft Azure AppInsight. Eventually add Docker to contenarize application.
 
