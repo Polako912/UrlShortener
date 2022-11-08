@@ -1,0 +1,32 @@
+<div class="home">
+    <div class="search-box">
+        <form class="url-form">
+            <mat-form-field class="url-full-width" appearance="fill">
+            <mat-label>Url</mat-label>
+            <input type="url" matInput [formControl]="urlFormControl" [errorStateMatcher]="matcher"
+                    placeholder="Ex. https://www.google.com">
+            <mat-error *ngIf="urlFormControl.hasError('url') && !urlFormControl.hasError('required')">
+                Please enter a valid url
+            </mat-error>
+            <mat-error *ngIf="urlFormControl.hasError('required')">
+                Url is <strong>required</strong>
+            </mat-error>
+            </mat-form-field>
+            <span *ngIf="error" class="text-danger">
+                {{error}}
+            </span>
+            <div class="button">
+                <button mat-raised-button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <mat-divider></mat-divider>
+    <div>
+        <form class="result-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Shortened Url</mat-label>
+            <input matInput placeholder="Shortened Url" value="{{shortUrl}}" readonly>
+            </mat-form-field>
+        </form>
+    </div>
+</div>
